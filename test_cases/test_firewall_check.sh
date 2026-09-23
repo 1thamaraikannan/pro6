@@ -1,6 +1,24 @@
 #!/bin/bash
 
-SCRIPT="./firewall_check.sh"
+SC#!/bin/bash
+
+# TC03 - Check status of firewalld
+systemctl status firewalld
+
+# TC04 - Start firewalld service
+systemctl start firewalld
+
+# TC05 - Enable firewalld service on boot
+systemctl enable firewalld
+
+# TC06 - Display firewall state
+firewall-cmd --state
+
+# TC07 - Get default zone
+firewall-cmd --get-default-zone
+
+# TC08 - Get active zones
+firewall-cmd --get-active-zonesRIPT="./firewall_check.sh"
 
 PASS=0
 FAIL=0
